@@ -29,7 +29,7 @@ const Header = ({ isSidebarOpen, toggleSidebar }) => {
     <header
       className={`top-0 h-16 text-white flex justify-between p-2 transition-all duration-300 ease-in-out w-full`}
     >
-      <div className="flex items-center space-x-2 p-4 rounded-lg hover:bg-stone-800">
+      <div className="flex items-center space-x-2 p-4 rounded-lg">
         {!isSidebarOpen && (
           <div
             className="p-2 hover:bg-stone-800 rounded-lg cursor-pointer mr-4"
@@ -38,8 +38,10 @@ const Header = ({ isSidebarOpen, toggleSidebar }) => {
             <TbLayoutSidebar className="h-6 w-6 text-stone-300" />
           </div>
         )}
-        <h1 className="font-semibold text-stone-300 ">ChatGPT 4o</h1>
-        <ChevronDownIcon className="h-4 w-4" />
+        <div className="flex items-center space-x-2 hover:bg-stone-800 rounded-lg p-2">
+          <h1 className="font-semibold text-stone-300">ChatGPT 4o</h1>
+          <ChevronDownIcon className="h-4 w-4" />
+        </div>
       </div>
       <div className="flex items-center p-4 space-x-4">
         <button
